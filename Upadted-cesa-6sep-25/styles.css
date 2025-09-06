@@ -233,6 +233,179 @@ header .container button:hover {
       object-fit: cover;
     }
  
+/* HERO SECTION */
+.hero {
+  padding: 5rem 0;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-content {
+  color: var(--text);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(123, 241, 168, 0.1);
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.hero-main {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta .btn {
+  margin-right: 10px;
+}
+
+/* HERO CARD */
+.hero-card {
+  background: rgba(20, 20, 30, 0.6);
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 0 25px rgba(108, 156, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.hero-illus {
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+/* BLOBS */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+.b1 {
+  width: 120px; height: 120px;
+  background: rgba(108,156,255,0.7);
+  top: 20%; left: 20%;
+  animation: float 6s ease-in-out infinite;
+}
+.b2 {
+  width: 90px; height: 90px;
+  background: rgba(123,241,168,0.7);
+  top: 35%; right: 20%;
+  animation: float 8s ease-in-out infinite;
+}
+.b3 {
+  width: 60px; height: 60px;
+  background: rgba(255,200,120,0.7);
+  bottom: 20%; left: 40%;
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-card {
+    margin: 2rem auto 0;
+  }
+}
+.hero-card .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-card .btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-3px);
+}
+
+/* STYLES FIX */
+/* HERO CONTAINER FIX */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px; /* spacing between left & right */
+  max-width: 1200px; /* keep content centered */
+  margin: 0 auto; /* center horizontally */
+  padding: 0 40px; /* breathing space left & right */
+}
+
+/* Left side text alignment */
+.hero-content {
+  max-width: 550px;
+}
+
+/* Right side card (featured event) */
+.hero-card {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  opacity: 0.95; /* slightly transparent */
+}
+
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr; /* stack on smaller screens */
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-card {
+    margin: 0 auto; /* center card */
+  }
+}
+
+
+/* === Background Animation Opacity Fix === */
+.cube-container {
+  opacity: 0.28;   /* adjust between 0.2 - 0.35 for best look */
+}
+
+.surface {
+  background: rgba(255, 255, 255, 0.04); /* lighter cube faces */
+}
+
+.ball {
+  background: radial-gradient(circle, rgba(120, 180, 255, 0.45), transparent);
+}
+
+
 
     /* Global Styles */
     body {
@@ -645,6 +818,121 @@ header .container {
 }
 
 /* =============================
+   DEV TEAM SECTION
+============================= */
+.dev-team-section {
+  padding: 60px 20px; /* smaller padding than other sections */
+  background: var(--surface);
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1100px;
+}
+
+.dev-team-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  text-shadow: 0 0 12px rgba(108, 156, 255, 0.3);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.team-card {
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+.team-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--accent-light);
+}
+
+.team-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.team-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.team-info .social-links {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-info .social-links a {
+  color: var(--text);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.team-info .social-links a:hover {
+  color: var(--accent);
+}
+
+/* =============================
+   FOOTER (Center Align + Modern)
+============================= */
+.site-footer {
+  background: rgba(15, 15, 25, 0.95);
+  color: var(--text);
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.site-footer h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+
+/* =============================
    BUTTONS
 ============================= */
 .btn {
@@ -696,6 +984,141 @@ form button { margin-top: 10px; }
   background: var(--surface);
   color: var(--text);
 }
+
+
+/* =============================
+   FOOTER (Dark + Modern + Responsive)
+============================= */
+.site-footer {
+  background: rgba(15, 15, 25, 0.95); /* dark glassy look */
+  color: var(--text);
+  padding: 3rem 1.5rem 2rem;
+  font-family: 'EB Garamond', serif;
+  border-radius: 16px 16px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.site-footer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.footer-about p,
+.footer-form p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 0.5rem;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: var(--accent-light);
+}
+
+/* Social links */
+.footer-follow .social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.footer-follow .social-links a {
+  font-size: 1.4rem;
+  color: var(--text);
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer-follow .social-links a:hover {
+  color: var(--accent);
+  transform: scale(1.15);
+}
+
+/* Newsletter form */
+.footer-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.footer-form input[type="email"] {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.footer-form button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 50px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background: var(--accent-light);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    text-align: center;
+  }
+  .footer-follow .social-links {
+    justify-content: center;
+  }
+  .footer-form form {
+    flex-direction: column;
+  }
+  .footer-form input,
+  .footer-form button {
+    width: 100%;
+  }
+}
+
 
 /* =============================
    COUNTDOWN (events page)
