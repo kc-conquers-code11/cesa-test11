@@ -1,0 +1,105 @@
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/logo-light.png" alt="CESA Logo" class="logo">
+    </div>
+    <div class="actions">
+      <button class="btn secondary" id="themeToggle">🌙</button>
+    </div>
+  </div>
+
+  <div class="video-mask">
+    <!-- video that fills text -->
+    <video class="mask-video" autoplay muted loop playsinline>
+      <source src="assets/header-ani.mp4" type="video/mp4">
+    </video>
+    <!-- glowing outline (above) -->
+    <h1 class="outline-text">CESA × CSI</h1>
+  </div>
+</header>
+
+<style>
+.site-header {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  overflow: hidden;
+}
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  position: relative;
+}
+.logo { height: 60px; }
+
+.video-mask {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* actual video masked into text */
+.mask-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: url(#text-mask);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: url(#text-mask);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+/* SVG defs */
+svg#mask-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.mask-text {
+  font-family: "EB Garamond", serif;
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  fill: white;
+}
+
+/* glowing outline */
+.outline-text {
+  position: absolute;
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s infinite alternate;
+  pointer-events: none;
+}
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px cyan); }
+  to   { filter: drop-shadow(0 0 25px cyan) drop-shadow(0 0 40px blue); }
+}
+</style>
+
+<!-- defs must be outside header for mask reference -->
+<svg id="mask-defs" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="text-mask">
+      <rect width="100%" height="100%" fill="black"/>
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+        class="mask-text">CESA × CSI</text>
+    </mask>
+  </defs>
+</svg>

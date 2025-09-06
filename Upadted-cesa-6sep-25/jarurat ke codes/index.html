@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href = "assets/favicon.png" type="image/x-icon">
+  <title>CESA • CSI </title>
+  <meta name="description" content="Official website of CESA: events, projects, resources, and community." />
+  <meta property="og:title" content="CESA • CSI - “Code. Connect. Conquer">
+ <meta property="og:description" content="Join CESA for workshops, hackathons, mentorship, and real-world projects.">
+ <!-- <meta property="og:image" content="assets/gemini.jpg"> -->
+ <meta property="og:url" content="https://pvppcoe.ac.in">
+ <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!--  start loader -->
+<div id="loader">
+  <video autoplay muted loop playsinline>
+    <source src="assets/intro.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <!-- 3D Cube + Floating Ball Background -->
+  <div class="cube-container">
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="ball-container"><div class="ball"></div></div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    
+    <!-- Header (no full navbar by design) -->
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <img src="assets/cesa-csi.png" alt="CESA Logo" class="logo">
+          <h1>CESA • CSI - Code. Connect. Conquer</h1>
+        </div>
+
+        <!-- dark light toggle -->
+        <div class="actions"> 
+          <button class="btn secondary" id="themeToggle">🌙</button>
+          <!-- hamburger/nav intentionally omitted for single-page design -->
+        </div>
+      </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="hero-main">The CESA</h1>
+          <span class="badge">💡 Innovate • Build • Impact</span>
+          <h2 class="title">Building a stronger tech culture on campus.</h2>
+          <p class="subtitle">Join CESA for workshops, hackathons, mentorship, and real-world projects.</p>
+          <div class="cta">
+            <a href="events.html" class="btn">View Events</a>
+            <!-- <a href="#projects" class="btn secondary">Explore Projects</a> -->
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-illus" aria-hidden="true">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+          </div>
+          <div class="mt12">
+            <span class="pill">🔥 Featured</span>
+            <div class="mt8">
+              "CODE~ZIA" • 27–28 Sep —
+              <a href="events.html" class="btn secondary">Registrations Open</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About CESA</h2>
+        <p class="lead">CESA is a student-led body that drives technical culture through workshops, speaker sessions, hackathons, open-source sprints, and industry collaborations.</p>
+        <div class="grid mt18">
+          <div class="card"><h3>What we do</h3><p>Hands-on events, mentorship circles, monthly build challenges, and real-world deployments for campus needs.</p></div>
+          <div class="card"><h3>Who can join</h3><p>Anyone curious about coding, design, AI/ML, cybersecurity, IoT, or product building — from beginners to pros.</p></div>
+          <div class="card"><h3>Outcomes</h3><p>Resume-grade projects, internships via alumni connects, and a portfolio of real contributions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects - will be configured later  -->
+    <!-- <section class="section" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid mt18">
+          <div class="card"><h3>Campus Navigator</h3><p>Interactive map and navigation app for college facilities.</p></div>
+          <div class="card"><h3>Smart Attendance</h3><p>Face-recognition based attendance tracker.</p></div>
+          <div class="card"><h3>EcoEnergy Monitor</h3><p>IoT solution for monitoring energy usage on campus.</p></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Mentors -->
+    <section class="section" id="mentors">
+      <div class="container">
+        <h2>Our Mentors</h2>
+        <div class="mentor-grid">
+          <div class="mentor-member"><img src="assets/pvppcoe.png" alt=""><p>Prof. Karishma Sambharkar <br><span>Faculty Co-ordinator</span></p></div>
+          <div class="mentor-member"><img src="assets/Dr.Rais-Mulla-2.jpg" alt=""><p>Dr. Raisa Mulla<br><span>HOD</span></p></div>
+          <div class="mentor-member"><img src="assets/principal.mhtml" alt=""><p>Dr. Alam Shaikh<br><span>Principal </span></p></div>
+          <!-- <div class="mentor-member"><img src="assets/mentor4.jpg" alt=""><p>Dr. Ashok Fitness<br><span>Data Science Mentor</span></p></div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member"><img src="assets/cesa-president.png" alt=""><p>Vedika Sonje <br><span>President</span></p></div>
+          <div class="team-member"><img src="assets/cesa-secratary.png" alt=""><p>Manas Amare<br><span>Secratary</span></p></div>
+          <div class="team-member"><img src="assets/cesa-joint-sec.png" alt=""><p>Diksha Devare<br><span>Joint Secratary</span></p></div>
+          <div class="team-member"><img src="assets/cesa-creative.png" alt=""><p>Anita <br><span>Publicity Head</span></p></div>
+          <div class="team-member"><img src="assets/cesa-creative.png" alt=""><p>Gauri Kautkar<br><span>Creative Head</span></p></div>
+          <div class="team-member"><img src="assets/cesa-technical.png" alt=""><p>Vedanth Gali <br><span>Technical Head</span></p></div>
+          <div class="team-member"><img src="assets/cesa-documentation.png" alt=""><p>Anjali <br><span>Documentation Head</span></p></div>
+          <div class="team-member"><img src="assets/cesa-infra.png" alt=""><p>Harsh Kumar <br><span>Infra & Security Head</span></p></div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+   <section class="section" id="gallery">
+    <div class="container">
+        <h2> Events Gallery</h2>
+        <div class="gallery-grid">
+            <div class="card gimg">
+                <a href="assets/g1.png">
+                    <img src="assets/g1.png" alt="CESA event gallery image 1">
+                </a>
+            </div>
+            <div class="card gimg">
+                <a href="assets/g2.png">
+                    <img src="assets/g2.jfif" alt="CESA event gallery image 2">
+                </a>
+            </div>
+            <div class="card gimg">
+                <a href="assets/g3.png">
+                    <img src="assets/g3.png" alt="CESA event gallery image 3">
+                </a>
+            </div>
+            <div class="card gimg">
+                <a href="assets/g4.png">
+                    <img src="assets/g4.png" alt="CESA event gallery image 4">
+                </a>
+            </div>
+            <div class="card gimg">
+                <a href="assets/g5.png">
+                    <img src="assets/g5.png" alt="CESA event gallery image 5">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Sponsors -->
+<section class="section">
+    <div class="container">
+        <h2>Our Sponsors</h2>
+        <div class="sponsor-carousel">
+            <div class="sponsor-track">
+                <!-- Row 1 -->
+                <a href="https://www.pnbindia.in/" target="_blank" aria-label="Punjab National Bank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Punjab_National_Bank_new_logo.svg/496px-Punjab_National_Bank_new_logo.svg.png" alt="Punjab National Bank" class="sponsor-logo">
+                </a>
+                <a href="https://www.onlinesbi.sbi/" target="_blank" aria-label="State Bank of India">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/SBI-logo.svg/500px-SBI-logo.svg.png" alt="State Bank of India" class="sponsor-logo">
+                </a>
+                <a href="https://www.idbibank.in/" target="_blank" aria-label="IDBI Bank">
+                    <img src="https://www.idbibank.in/images/idbi-logo.png" alt="IDBI Bank" class="sponsor-logo">
+                </a>
+                <a href="https://www.sonymusic.com/" target="_blank" aria-label="Sony Music">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Sony_Music_logo.svg/500px-Sony_Music_logo.svg.png" alt="Sony Music" class="sponsor-logo">
+                </a>
+                <a href="https://www.dominos.com/en/" target="_blank" aria-label="Domino's Pizza">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Domino%27s_Pizza_logo.svg/500px-Domino%27s_Pizza_logo.svg.png" alt="Domino's Pizza" class="sponsor-logo">
+                </a>
+                <a href="https://www.toyota.com/" target="_blank" aria-label="Toyota">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Toyota_logo.svg/500px-Toyota_logo.svg.png" alt="Toyota" class="sponsor-logo">
+                </a>
+
+                <!-- Repeat same sponsors to make carousel loop smoothly -->
+                <a href="https://www.pnbindia.in/" target="_blank" aria-label="Punjab National Bank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Punjab_National_Bank_new_logo.svg/496px-Punjab_National_Bank_new_logo.svg.png" alt="Punjab National Bank" class="sponsor-logo">
+                </a>
+                <a href="https://www.onlinesbi.sbi/" target="_blank" aria-label="State Bank of India">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/SBI-logo.svg/500px-SBI-logo.svg.png" alt="State Bank of India" class="sponsor-logo">
+                </a>
+                <a href="https://www.idbibank.in/" target="_blank" aria-label="IDBI Bank">
+                    <img src="https://www.idbibank.in/images/idbi-logo.png" alt="IDBI Bank" class="sponsor-logo">
+                </a>
+                <a href="https://www.sonymusic.com/" target="_blank" aria-label="Sony Music">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Sony_Music_logo.svg/500px-Sony_Music_logo.svg.png" alt="Sony Music" class="sponsor-logo">
+                </a>
+                <a href="https://www.dominos.com/en/" target="_blank" aria-label="Domino's Pizza">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Domino%27s_Pizza_logo.svg/500px-Domino%27s_Pizza_logo.svg.png" alt="Domino's Pizza" class="sponsor-logo">
+                </a>
+                <a href="https://www.toyota.com/" target="_blank" aria-label="Toyota">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Toyota_logo.svg/500px-Toyota_logo.svg.png" alt="Toyota" class="sponsor-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FAQS -->
+
+
+<section class="section faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    When and where would the hackathon take place?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hackaa  It is a </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is there a Participation Fee?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, every event has an entry fee and a prize pool.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Are there any prizes?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, every event has prizes, with a total prize pool worth ₹75,000.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Will there be Wi-Fi?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, internet will be provided for all technical events.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What 
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The theme  </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How to Register?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Go to the Events section and press the Register button to fill the form. Done! You are </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    About Us?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>CESA & CSI , aiming to provide students with hands-on experience, competitions, workshops, and networking opportunities in the </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contactForm">
+          <div class="grid mt18">
+            <input type="text" id="name" placeholder="Your Name" required class="wide-input">
+            <input type="email" id="email" placeholder="Your Email" required class="wide-input">
+          </div>
+          <textarea id="message" placeholder="Your Message" required class="large-textarea"></textarea>
+          <p id="formStatus" class="muted mt8"></p>
+          <button type="submit" class="btn mt12">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Newsletter (unique IDs for this page) -->
+    <div class="newsletter mt18">
+      <input type="email" id="newsletter-index" placeholder="Enter your email">
+      <button id="subscribe-index" class="btn secondary">Subscribe</button>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Footer -->
+
+   <footer class="site-footer">
+    <div class="container footer-grid">
+
+        <!-- About & Quick Links -->
+        <div class="footer-about">
+            <h3>About</h3>
+            <p>CESA & CSI together      , bringing students closer to technology, competitions, and innovation.</p>
+            <ul class="quick-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Follow / Social Links -->
+        <div class="footer-follow">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Newsletter / Form -->
+        <div class="footer-form">
+            <h3>Stay Updated</h3>
+            <p>Subscribe for latest updates on events, workshops, and hackathons.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 CESA & CSI | All Rights Reserved</p>
+    </div>
+</footer>
+
+
+  <!-- dev team -->
+
+  <section class="section dev-team-section">
+    <div class="container">
+        <h2>Meet the Dev Team</h2>
+        <div class="team-grid">
+
+            <div class="team-member">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
+                    <div class="team-info">
+                        <h3>John Doe</h3>
+                        <p>Frontend Developer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith">
+                    <div class="team-info">
+                        <h3>KC</h3>
+                        <p>Backend Developer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Alex Johnson">
+                    <div class="team-info">
+                        <h3>AS</h3>
+                        <p>Full Stack Developer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Davis">
+                    <div class="team-info">
+                        <h3>Emily Davis</h3>
+                        <p>UI/UX Designer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CESA × CSI Video Text</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: "EB Garamond", serif;
+    }
+
+    .site-header {
+      height: 100vh; /* 🔥 Full screen hero */
+      display: flex;
+      flex-direction: column;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .container.nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 10;
+      position: relative;
+    }
+
+    .logo {
+      height: 50px;
+      max-height: 8vh;
+    }
+
+    .video-mask {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* glowing outline text */
+    .outline-text {
+      position: absolute;
+      font-size: clamp(2rem, 10vw, 8rem); /* responsive scaling */
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: "EB Garamond", serif;
+      color: transparent;
+      -webkit-text-stroke: 2px #fff;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+      text-align: center;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 10px cyan); }
+      to   { filter: drop-shadow(0 0 25px cyan) drop-shadow(0 0 40px blue); }
+    }
+
+    /* SVG video full size */
+    .svg-mask {
+      width: 100%;
+      height: 100%;
+    }
+    .mask-text {
+      font-size: clamp(2rem, 10vw, 8rem); /* responsive scaling */
+      font-weight: 900;
+      font-family: "EB Garamond", serif;
+      text-transform: uppercase;
+      fill: white;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo-light.png" alt="CESA Logo" class="logo">
+      </div>
+      <div class="actions">
+        <button class="btn secondary" id="themeToggle">🌙</button>
+      </div>
+    </div>
+
+    <!-- video inside text using SVG mask -->
+    <div class="video-mask">
+      <svg viewBox="0 0 1000 300" class="svg-mask" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <mask id="text-mask" x="0" y="0" width="100%" height="100%">
+            <rect width="100%" height="100%" fill="black"/>
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="mask-text">
+              CESA × CSI
+            </text>
+          </mask>
+        </defs>
+        <foreignObject width="100%" height="100%" mask="url(#text-mask)">
+          <video autoplay muted loop playsinline>
+            <source src="assets/header-ani.mp4" type="video/mp4"/>
+          </video>
+        </foreignObject>
+      </svg>
+
+      <!-- glowing outline -->
+      <h1 class="outline-text">CESA × CSI</h1>
+    </div>
+  </header>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href = "assets/cesa-csi-removebg-preview.png" type="image/x-icon">
+  <title>CESA — Computer Engineering Students Association</title>
+  <meta name="description" content="Official website of CESA: events, projects, resources, and community." />
+  <meta property="og:title" content="CESA — Computer Engineering Students Association">
+ <meta property="og:description" content="Join CESA for workshops, hackathons, mentorship, and real-world projects.">
+ <meta property="og:image" content="assets/cesa-banner.jpg">
+ <meta property="og:url" content="https://pvppcoe.ac.in">
+ <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+
+    <!-- ================== LOADER ================== -->
+<div id="loader">
+  <video autoplay muted loop playsinline>
+    <source src="assets/intro.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+  <!-- 3D Cube + Floating Ball Background -->
+  <div class="cube-container">
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="wall"><div class="surface"></div></div>
+    <div class="ball-container"><div class="ball"></div></div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+
+<!-- ================== HEADER ================== -->
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/cesa-csi.png" alt="CESA Logo" class="logo">
+    </div>
+    <div class="actions">
+      <button class="btn secondary" id="themeToggle">🌙</button>
+    </div>
+  </div>
+
+  <div class="video-mask">
+    <svg width="0" height="0">
+      <defs>
+        <mask id="text-mask">
+          <rect width="100%" height="100%" fill="black"/>
+          <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+            class="mask-text">CESA × CSI</text>
+        </mask>
+      </defs>
+    </svg>
+
+    <video class="mask-video" autoplay muted loop playsinline>
+      <source src="assets/header-ani.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="outline-text">CESA × CSI</h1>
+  </div>
+</header>
+
+<style>
+.site-header {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  overflow: hidden;
+}
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  position: relative;
+}
+.logo { height: 60px; }
+
+.video-mask {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* actual video masked into text */
+.mask-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: url(#text-mask);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: url(#text-mask);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+/* glowing outline */
+.outline-text {
+  position: absolute;
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s infinite alternate;
+  pointer-events: none;
+}
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px cyan); }
+  to   { filter: drop-shadow(0 0 25px cyan) drop-shadow(0 0 40px blue); }
+}
+
+/* SVG defs - make sure these styles are also present */
+.mask-text {
+  font-family: "EB Garamond", serif;
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  fill: white;
+}
+</style>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="hero-main">The CESA</h1>
+          <span class="badge">💡 Innovate • Build • Impact</span>
+          <h2 class="title">Building a stronger tech culture on campus.</h2>
+          <p class="subtitle">Join CESA for workshops, hackathons, mentorship, and real-world projects.</p>
+          <div class="cta">
+            <a href="events.html" class="btn">View Events</a>
+            <a href="#projects" class="btn secondary">Explore Projects</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-illus" aria-hidden="true">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+          </div>
+          <div class="mt12">
+            <span class="pill">🔥 Featured</span>
+            <div class="mt8">
+              "CODE~ZIA" • 27–28 Sep —
+              <a href="events.html" class="btn secondary">Registrations Open</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About CESA</h2>
+        <p class="lead">CESA is a student-led body that drives technical culture through workshops, speaker sessions, hackathons, open-source sprints, and industry collaborations.</p>
+        <div class="grid mt18">
+          <div class="card"><h3>What we do</h3><p>Hands-on events, mentorship circles, monthly build challenges, and real-world deployments for campus needs.</p></div>
+          <div class="card"><h3>Who can join</h3><p>Anyone curious about coding, design, AI/ML, cybersecurity, IoT, or product building — from beginners to pros.</p></div>
+          <div class="card"><h3>Outcomes</h3><p>Resume-grade projects, internships via alumni connects, and a portfolio of real contributions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid mt18">
+          <div class="card"><h3>Campus Navigator</h3><p>Interactive map and navigation app for college facilities.</p></div>
+          <div class="card"><h3>Smart Attendance</h3><p>Face-recognition based attendance tracker.</p></div>
+          <div class="card"><h3>EcoEnergy Monitor</h3><p>IoT solution for monitoring energy usage on campus.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentors -->
+    <section class="section" id="mentors">
+      <div class="container">
+        <h2>Our Mentors</h2>
+        <div class="mentor-grid">
+          <div class="mentor-member"><img src="assets/mentor1.jpg" alt=""><p>Prof. Deepak Kalal<br><span>AI Expert</span></p></div>
+          <div class="mentor-member"><img src="assets/mentor2.jpg" alt=""><p>Dr. Yeshu Mulla<br><span>Cybersecurity Advisor</span></p></div>
+          <div class="mentor-member"><img src="assets/mentor3.jpg" alt=""><p>Prof. Emon Lust<br><span>Industry Mentor</span></p></div>
+          <div class="mentor-member"><img src="assets/mentor4.jpg" alt=""><p>Dr. Ashok Fitness<br><span>Data Science Mentor</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member"><img src="assets/team1.jpg" alt=""><p>Deep Thorat<br><span>President</span></p></div>
+          <div class="team-member"><img src="assets/team2.jpg" alt=""><p>Kishan Kalua<br><span>Tech Lead</span></p></div>
+          <div class="team-member"><img src="assets/team3.jpg" alt=""><p>DJ Kamlesh<br><span>Design Lead</span></p></div>
+          <div class="team-member"><img src="assets/team4.jpg" alt=""><p>Sanni Dancer<br><span>AI/ML Lead</span></p></div>
+          <div class="team-member"><img src="assets/team5.jpg" alt=""><p>Sonu Potty<br><span>Events Lead</span></p></div>
+          <div class="team-member"><img src="assets/team6.jpg" alt=""><p>Legendary Lopamudra<br><span>Ops Lead</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <div class="card gimg"></div>
+          <div class="card gimg"></div>
+          <div class="card gimg"></div>
+          <div class="card gimg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contactForm">
+          <div class="grid mt18">
+            <input type="text" id="name" placeholder="Your Name" required class="wide-input">
+            <input type="email" id="email" placeholder="Your Email" required class="wide-input">
+          </div>
+          <textarea id="message" placeholder="Your Message" required class="large-textarea"></textarea>
+          <p id="formStatus" class="muted mt8"></p>
+          <button type="submit" class="btn mt12">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Newsletter (unique IDs for this page) -->
+    <div class="newsletter mt18">
+      <input type="email" id="newsletter-index" placeholder="Enter your email">
+      <button id="subscribe-index" class="btn secondary">Subscribe</button>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container footgrid">
+        <div>
+          <h1>CESA</h1>
+          <p class="muted mt12">© <span id="year"></span> CESA — All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="events.html">Events</a></p>
+          <p><a href="#projects">Projects</a></p>
+          <p><a href="#resources">Resources</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
